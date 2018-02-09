@@ -5,4 +5,4 @@ blockChain.addBlock(new Block(1, "8/2/2018", {amount: 4}));
 
 
 console.log(blockChain);
-console.log("blockchain is valid" + blockChain.isChainValid());
+console.log("blockchain is valid " + blockChain.isChainValid());
