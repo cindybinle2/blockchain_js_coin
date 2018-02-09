@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "./node_modules/.bin/eslint ./src/**/*.js && node ./src/run"
+    "test": "./node_modules/.bin/eslint ./src/**/*.js && node ./test/RunTest",
+    "start": "./node_modules/.bin/eslint ./src/**/*.js"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +16,8 @@
     "eslint": "^4.17.0"
   },
   "dependencies": {
-    "crypto-js": "^3.1.9-1"
+    "crypto-js": "^3.1.9-1",
+    "leveldown": "^3.0.0",
+    "levelup": "^2.0.1"
   }
 }

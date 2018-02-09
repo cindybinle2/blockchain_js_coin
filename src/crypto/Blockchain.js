@@ -1,9 +1,8 @@
 import Block from "./Block";
-
+import MineConfig from "./../config/MineConfig";
 export default class Blockchain{
   constructor(){
     this.chain= [this.createGenesisBlock()];
-    this.difficultyMine= 1;
   }
 
   createGenesisBlock(){
@@ -16,7 +15,7 @@ export default class Blockchain{
 
   addBlock(newBlock){
     newBlock.previousHash= this.getLatestBlock().hash;
-    newBlock.mineBlock(this.difficultyMine);
+    newBlock.mineBlock(MineConfig.difficultyLevel);
     this.chain.push(newBlock);
   }
 
