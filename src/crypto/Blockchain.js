@@ -1,12 +1,16 @@
 import Block from "./Block";
 import MineConfig from "./../config/MineConfig";
+import BlockRepository from "./../db/repository/BlockRepository";
 export default class Blockchain{
   constructor(){
     this.chain= [this.createGenesisBlock()];
   }
 
   createGenesisBlock(){
-    return new Block(0, "01/01/2018", "Genesis block", "0");
+    const genesisBlock= new Block(0, "01/01/2018", "Genesis block", "0");
+    let blockRepository= new BlockRepository();
+    blockRepository.save(genesisBlock.hash, JSON.stringify(genesisBlock));
+    return genesisBlock;
   }
 
   getLatestBlock(){

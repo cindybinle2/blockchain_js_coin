@@ -1,3 +1,4 @@
 export default {
-  storagePath: "./storage"
+  storagePath: __dirname +"/../../storage",
+  blockStoragePath: __dirname +"/../../storage/block"
 };
