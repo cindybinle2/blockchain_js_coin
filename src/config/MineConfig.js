@@ -1,3 +1,3 @@
 export default {
-  difficultyLevel: 1
+  difficultyLevel: 5
 };

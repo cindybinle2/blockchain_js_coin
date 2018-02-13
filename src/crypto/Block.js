@@ -20,7 +20,6 @@ export default class Block {
       this.nonce++;
       this.hash= this.calculateHash();
     }
-    console.log(chalk.green("mined block: "+ this.hash));
   }
 }
 
